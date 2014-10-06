@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#BFEFFF"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/page_a"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/introduce_page_1"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+</LinearLayout>
