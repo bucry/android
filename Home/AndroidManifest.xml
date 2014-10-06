@@ -64,7 +64,7 @@
         <!-- meta-data需要写在application中 -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="262ff8263285398d3c34c0d691bef4fd" />
+            android:value="你的百度API-KEY" />
 
         <activity
             android:name="com.home.app.activitys.LoginActivity"
