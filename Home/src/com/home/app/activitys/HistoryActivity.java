@@ -111,6 +111,7 @@ public class HistoryActivity extends BaseActivity {
 			
 			
 			if (result == null || result.isEmpty()) { //下拉加载更多，没有数据，保持之前内容
+				mPullRefreshListView.onRefreshComplete();
 				return;
 			}
 			
