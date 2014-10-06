@@ -98,7 +98,7 @@ public class LocationApplication extends Application {
 			if (StringUtils.hasText(location.getAddrStr())) {
 				if (StringUtils.hasText(lastAddres) && !lastAddres.equals(location.getAddrStr())) {
 					lastAddres = location.getAddrStr();
-					new AsyncAndGetUser().execute(request);
+					new AsyncAndUploadLocation().execute(request);
 					Log.i("BaiduLocationApiDem", sb.toString());
 				} else {
 					System.out.println("与上次位置相同，不上传");
@@ -110,7 +110,7 @@ public class LocationApplication extends Application {
 	}
 	
 	
-	private class AsyncAndGetUser extends AsyncTask<LocalPositionRequest, Integer, Integer> {
+	private class AsyncAndUploadLocation extends AsyncTask<LocalPositionRequest, Integer, Integer> {
 		@Override
 		protected Integer doInBackground(LocalPositionRequest... params) {
 			try {
