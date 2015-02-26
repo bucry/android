@@ -1,4 +1,2 @@
-android
-=======
-
-安卓编程案例
+这里是Android项目代码
+Footprint为类似Google上的家庭定位软件
