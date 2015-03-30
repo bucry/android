@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#FF0000</color>
+    <color name="noselect">#ffccccc6</color>
+    <color name="write">#FFFFFF</color>
+    <color name="basebackground">#eff1ff</color>
+    <color name="other_information">#f1f1ff</color>
+    <color name="user_detail_font_color">#292929</color>
+    <color name="blue">#116CBB</color>
+    <color name="face_bg">#eef1f4</color>
+</resources>

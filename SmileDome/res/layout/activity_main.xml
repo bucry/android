@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    
+    
+    <LinearLayout 
+        android:id="@+id/content"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            android:id="@+id/face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="表情" />
+
+         <com.example.smiledome.SmiliesEditText
+        android:id="@+id/EditText1"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:singleLine="true"
+        android:textSize="25sp" />
+    </LinearLayout>
+    
+
+    <GridView
+        android:id="@+id/emoj"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/face_bg"
+        android:columnWidth="45dip"
+        android:fadingEdge="none"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:scrollingCache="false"
+        android:stretchMode="columnWidth"
+        android:visibility="gone" />
+
+</LinearLayout>
