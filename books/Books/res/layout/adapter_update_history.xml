@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/traffic_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/traffic_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rect_white_bg" >
+
+                    <ImageView
+                        android:id="@+id/traffic_icon"
+                        android:layout_width="26dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/service_traffic_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="45dp"
+                        android:text="交通"
+                        android:textColor="#4b4b47"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/traffic_arrow"
+                        android:layout_width="12dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/service_arrow_down"
+                        android:tag="service_arrow" />
+                </RelativeLayout>
+
+                <com.fcbai.books.views.FoldingLayout
+                    android:id="@+id/traffic_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:tag="service_item" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:background="#ff8e6b"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="停车场查询"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="公交实时查询"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="公共自行车查询"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="路况查询"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="水上巴士查询"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="地铁查询"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="高速路况查询"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp"
+                                android:visibility="invisible" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:textColor="#d55a34"
+                                android:textSize="13dp"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.fcbai.books.views.FoldingLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/life_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/life_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rect_white_bg" >
+
+                    <ImageView
+                        android:id="@+id/life_icon"
+                        android:layout_width="17dp"
+                        android:layout_height="26dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14dp"
+                        android:background="@drawable/service_life_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="45dp"
+                        android:text="生活"
+                        android:textColor="#4b4b47"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/life_arrow"
+                        android:layout_width="12dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/service_arrow_down"
+                        android:tag="service_arrow" />
+
+                </RelativeLayout>
+
+                <com.fcbai.books.views.FoldingLayout
+                    android:id="@+id/life_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:tag="service_item" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:background="#ffc14c"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="菜价查询"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="修鞋"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="修自行车"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="开锁服务"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="裁缝店"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="配钥匙"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="家电维修"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="找公共厕所"
+                                android:textColor="#a65600"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:textColor="#a65600"
+                                android:textSize="13dp"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.fcbai.books.views.FoldingLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/medical_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/medical_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rect_white_bg" >
+
+                    <ImageView
+                        android:id="@+id/medical_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="11dp"
+                        android:background="@drawable/service_medical_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="45dp"
+                        android:text="医疗"
+                        android:textColor="#4b4b47"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/medical_arrow"
+                        android:layout_width="12dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/service_arrow_down"
+                        android:tag="service_arrow" />
+
+                </RelativeLayout>
+
+                <com.fcbai.books.views.FoldingLayout
+                    android:id="@+id/medical_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:tag="service_item" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:background="#699bf9"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="预约挂号"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="排队叫号"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="检查报告"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="医院查询"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="科室查询"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="医生查询"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="医保网点"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp"
+                                android:visibility="invisible" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:textColor="#2b5bb5"
+                                android:textSize="13dp"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.fcbai.books.views.FoldingLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/live_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/live_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rect_white_bg" >
+
+                    <ImageView
+                        android:id="@+id/live_icon"
+                        android:layout_width="26dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/service_live_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="45dp"
+                        android:text="直播"
+                        android:textColor="#4b4b47"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/live_arrow"
+                        android:layout_width="12dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/service_arrow_down"
+                        android:tag="service_arrow" />
+
+                </RelativeLayout>
+
+                <com.fcbai.books.views.FoldingLayout
+                    android:id="@+id/live_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:tag="service_item" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:background="#59cd82"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="杭州综合频道"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="西湖明珠频道"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="杭州生活频道"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="杭州影视频道"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="杭州少儿频道"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="FM105.4"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="FM89"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="交通91.8"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:textColor="#1a6535"
+                                android:textSize="13dp"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.fcbai.books.views.FoldingLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/public_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/public_bar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rect_white_bg" >
+
+                    <ImageView
+                        android:id="@+id/public_icon"
+                        android:layout_width="26dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/service_public_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="45dp"
+                        android:text="公共"
+                        android:textColor="#4b4b47"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/public_arrow"
+                        android:layout_width="12dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/service_arrow_down"
+                        android:tag="service_arrow" />
+
+                </RelativeLayout>
+
+                <com.fcbai.books.views.FoldingLayout
+                    android:id="@+id/public_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:tag="service_item" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:background="#a484d9"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="公积金查询"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="违章查询"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="水费查询"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="医保查询"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="煤气费查询"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="电费查询"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:text="号码助手"
+                                android:textColor="#473762"
+                                android:textSize="13dp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:textColor="#473762"
+                                android:textSize="13dp"
+                                android:visibility="invisible" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="29dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/service_btn_bg"
+                                android:textColor="#473762"
+                                android:textSize="13dp"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.fcbai.books.views.FoldingLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/bottom_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

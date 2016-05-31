@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="Name" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="books name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="pageNo" />
+
+        <EditText
+            android:layout_width="50dp"
+            android:id="@+id/current_page_no"
+            android:layout_height="wrap_content"
+            android:hint="0" />
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:hint="/" />
+
+        <EditText
+            android:layout_width="50dp"
+            android:id="@+id/total_page_no"
+            android:layout_height="wrap_content"
+            android:hint="500" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/select_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="select" />
+
+    <Button
+        android:id="@+id/start_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="start_date" />
+
+    <Button
+        android:id="@+id/end_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="end_date" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="save" />
+
+        <Button
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="close" />
+    </LinearLayout>
+
+</LinearLayout>
